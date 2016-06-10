@@ -1,0 +1,10 @@
+.DS_Store
+.idea
+
+*-e
+*.orig
+*.backup
+xcshareddata
+xcuserdata
+build
+Peiwo/Classes/Libs/WebRTC_old/
