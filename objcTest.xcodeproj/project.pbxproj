@@ -17,6 +17,7 @@
 		E9768CC31D0419820062700F /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = E9768CC21D0419820062700F /* Test.m */; };
 		E9768CC61D041E050062700F /* MaxEarnings.m in Sources */ = {isa = PBXBuildFile; fileRef = E9768CC51D041E050062700F /* MaxEarnings.m */; };
 		E9768CCA1D0436B10062700F /* GCDTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E9768CC91D0436B10062700F /* GCDTest.m */; };
+		E9E625991D0D4FB900159320 /* UIView+OT.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E625981D0D4FB900159320 /* UIView+OT.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,8 @@
 		E9768CC71D0431EC0062700F /* Headers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Headers.h; sourceTree = "<group>"; };
 		E9768CC81D0436B10062700F /* GCDTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDTest.h; sourceTree = "<group>"; };
 		E9768CC91D0436B10062700F /* GCDTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDTest.m; sourceTree = "<group>"; };
+		E9E625971D0D4FB900159320 /* UIView+OT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+OT.h"; sourceTree = "<group>"; };
+		E9E625981D0D4FB900159320 /* UIView+OT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+OT.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,7 @@
 				E9768CC71D0431EC0062700F /* Headers.h */,
 				E9768CC11D0419820062700F /* Test.h */,
 				E9768CC21D0419820062700F /* Test.m */,
+				E9E625961D0D4FA400159320 /* view */,
 				E9768CBD1D0418D70062700F /* algorithm */,
 				E9768B321CFE87680062700F /* event */,
 				E9768B331CFE87680062700F /* gcd */,
@@ -140,6 +144,15 @@
 				E9768CC51D041E050062700F /* MaxEarnings.m */,
 			);
 			path = algorithm;
+			sourceTree = "<group>";
+		};
+		E9E625961D0D4FA400159320 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				E9E625971D0D4FB900159320 /* UIView+OT.h */,
+				E9E625981D0D4FB900159320 /* UIView+OT.m */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9768B201CFE86790062700F /* ViewController.m in Sources */,
+				E9E625991D0D4FB900159320 /* UIView+OT.m in Sources */,
 				E9768CCA1D0436B10062700F /* GCDTest.m in Sources */,
 				E9768B1D1CFE86790062700F /* AppDelegate.m in Sources */,
 				E9768CC61D041E050062700F /* MaxEarnings.m in Sources */,

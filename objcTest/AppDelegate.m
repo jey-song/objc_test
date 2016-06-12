@@ -18,11 +18,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.tests = [NSMutableArray array];
     
-    NSArray *testNames = @[@"Binary",@"MaxEarnings",@"GCDTest",@"Test"];
+    NSArray *testNames = @[@"Binary",@"MaxEarnings",@"GCDTest",@"Test",@"UIView+OT"];
     
     for (NSString *name in testNames) {
-        Test *t = [[NSClassFromString(name) alloc] init];
-        [self.tests addObject:t];
+        NSObject *t = [[NSClassFromString(name) alloc] init];
+        if ([t isKindOfClass:[Test class]]) {
+            [self.tests addObject:t];
+        }
     }
     return YES;
 }
