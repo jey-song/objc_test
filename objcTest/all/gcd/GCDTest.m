@@ -15,6 +15,14 @@
 @end
 
 @implementation GCDTest
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.ignoreTests = YES;
+    }
+    return self;
+}
+
 - (void)testRunloop {
     NSLog(@"main runloop: %p", [NSRunLoop mainRunLoop]);
     // 1.

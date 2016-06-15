@@ -18,7 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.tests = [NSMutableArray array];
     
-    NSArray *testNames = @[@"Binary",@"MaxEarnings",@"GCDTest",@"Test",@"UIView+OT"];
+    NSArray *testNames = @[@"Binary",@"MaxEarnings",@"MsgSend",@"GCDTest",@"NSObject+OT",@"Test",@"UIView+OT"];
     
     for (NSString *name in testNames) {
         NSObject *t = [[NSClassFromString(name) alloc] init];

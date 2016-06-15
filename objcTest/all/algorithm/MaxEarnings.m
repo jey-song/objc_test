@@ -36,6 +36,14 @@
 
 
 @implementation MaxEarnings
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.ignoreTests = YES;
+    }
+    return self;
+}
+
 - (void)testEarnings {
     NSMutableArray *a = @[@15, @3, @6, @7, @19, @16, @11, @2, @18, @7, @9, @4, @10].mutableCopy;
     NSInteger t = [self earningsInPrices:a amount:1];

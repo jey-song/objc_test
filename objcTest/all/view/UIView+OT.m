@@ -7,19 +7,9 @@
 //
 
 #import "UIView+OT.h"
-#import <objc/runtime.h>
+#import "NSObject+OT.h"
 
 @implementation UIView (OT)
-
-+ (void)mk_swizzle:(SEL)aSelector {
-    SEL bSelector = NSSelectorFromString([NSString stringWithFormat:@"mk_%@", NSStringFromSelector(aSelector)]);
-    
-    Method m1 = class_getInstanceMethod(self, aSelector);
-    Method m2 = class_getInstanceMethod(self, bSelector);
-    
-    method_exchangeImplementations(m1, m2);
-}
-
 + (void)load {
     [self mk_swizzle:@selector(hitTest:withEvent:)];
     [self mk_swizzle:@selector(pointInside:withEvent:)];

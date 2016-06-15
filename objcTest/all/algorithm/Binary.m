@@ -9,6 +9,14 @@
 #import "Binary.h"
 
 @implementation Binary
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.ignoreTests = YES;
+    }
+    return self;
+}
+
 - (void)testSearch {
     NSArray *a = @[@1, @3, @6, @7, @9, @21, @23, @29, @33, @45, @46, @59, @60];
 
