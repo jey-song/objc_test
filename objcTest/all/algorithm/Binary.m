@@ -6,7 +6,7 @@
 //  Copyright © 2016 jey. All rights reserved.
 //
 
-#import "Binary.h"
+#import "Headers.h"
 
 @implementation Binary
 - (instancetype)init {
@@ -20,7 +20,7 @@
 - (void)testSearch {
     NSArray *a = @[@1, @3, @6, @7, @9, @21, @23, @29, @33, @45, @46, @59, @60];
 
-    NSLog(@"%ld", (long)[self searchIndexInArray:a targetItem:@3 minIndex:0 maxIndex:[a count] - 1]);
+    OTLog(@"%ld", (long)[self searchIndexInArray:a targetItem:@3 minIndex:0 maxIndex:[a count] - 1]);
 }
 
 #pragma mark -

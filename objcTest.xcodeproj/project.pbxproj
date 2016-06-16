@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E91AB4C41D12A27700DDD635 /* ThreadTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E91AB4C31D12A27700DDD635 /* ThreadTest.m */; };
 		E9768B1A1CFE86790062700F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9768B191CFE86790062700F /* main.m */; };
 		E9768B1D1CFE86790062700F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9768B1C1CFE86790062700F /* AppDelegate.m */; };
 		E9768B201CFE86790062700F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9768B1F1CFE86790062700F /* ViewController.m */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E91AB4C21D12A27700DDD635 /* ThreadTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadTest.h; sourceTree = "<group>"; };
+		E91AB4C31D12A27700DDD635 /* ThreadTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreadTest.m; sourceTree = "<group>"; };
 		E9768B151CFE86790062700F /* objcTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = objcTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9768B191CFE86790062700F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E9768B1B1CFE86790062700F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -134,6 +137,8 @@
 			children = (
 				E9768CC81D0436B10062700F /* GCDTest.h */,
 				E9768CC91D0436B10062700F /* GCDTest.m */,
+				E91AB4C21D12A27700DDD635 /* ThreadTest.h */,
+				E91AB4C31D12A27700DDD635 /* ThreadTest.m */,
 			);
 			path = gcd;
 			sourceTree = "<group>";
@@ -253,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9E6259C1D0DAB3800159320 /* MsgSend.m in Sources */,
+				E91AB4C41D12A27700DDD635 /* ThreadTest.m in Sources */,
 				E9768B201CFE86790062700F /* ViewController.m in Sources */,
 				E9E625991D0D4FB900159320 /* UIView+OT.m in Sources */,
 				E9768CCA1D0436B10062700F /* GCDTest.m in Sources */,

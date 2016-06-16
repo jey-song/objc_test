@@ -6,8 +6,7 @@
 //  Copyright © 2016 jey. All rights reserved.
 //
 
-#import "MsgSend.h"
-#import "NSObject+OT.h"
+#import "Headers.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
 
@@ -17,98 +16,93 @@
 
 @implementation NSObject (MSG_SEND)
 + (void)load {
-    if (0) {
-        [self mk_class_swizzle:@selector(resolveClassMethod:)];
-        [self mk_class_swizzle:@selector(resolveInstanceMethod:)];
-        [self mk_class_swizzle:@selector(instancesRespondToSelector:)];
-        [self mk_class_swizzle:@selector(instanceMethodForSelector:)];
-        [self mk_swizzle:@selector(methodForSelector:)];
-        [self mk_swizzle:@selector(doesNotRecognizeSelector:)];
-        [self mk_swizzle:@selector(forwardingTargetForSelector:)];
-        [self mk_swizzle:@selector(forwardInvocation:)];
-        [self mk_swizzle:@selector(methodSignatureForSelector:)];
-//        [self mk_swizzle:@selector(allowsWeakReference)];
-//        [self mk_swizzle:@selector(retainWeakReference)];
-        [self mk_class_swizzle:@selector(instanceMethodSignatureForSelector:)];
-    }
+//    if (0) {
+//        [self mk_class_swizzle:@selector(resolveClassMethod:)];
+//        [self mk_class_swizzle:@selector(resolveInstanceMethod:)];
+//        [self mk_class_swizzle:@selector(instancesRespondToSelector:)];
+//        [self mk_class_swizzle:@selector(instanceMethodForSelector:)];
+//        [self mk_swizzle:@selector(methodForSelector:)];
+//        [self mk_swizzle:@selector(doesNotRecognizeSelector:)];
+//        [self mk_swizzle:@selector(forwardingTargetForSelector:)];
+//        [self mk_swizzle:@selector(forwardInvocation:)];
+//        [self mk_swizzle:@selector(methodSignatureForSelector:)];
+////        [self mk_swizzle:@selector(allowsWeakReference)];
+////        [self mk_swizzle:@selector(retainWeakReference)];
+//        [self mk_class_swizzle:@selector(instanceMethodSignatureForSelector:)];
+//    }
 }
 
 + (BOOL)mk_instancesRespondToSelector:(SEL)aSelector {
     BOOL v = [self mk_instancesRespondToSelector:aSelector];
-    NSLog(@"class(%@:%p:%s), value(%d)", self.class, self, __FUNCTION__, v);
+    OTLog(@"class(%@:%p:%s), value(%d)", self.class, self, __FUNCTION__, v);
     return v;
 }
 - (IMP)mk_methodForSelector:(SEL)aSelector {
     IMP imp = [self mk_methodForSelector:aSelector];
-    NSLog(@"class(%@:%p:%s), value(%p)", self.class, self, __FUNCTION__, imp);
+    OTLog(@"class(%@:%p:%s), value(%p)", self.class, self, __FUNCTION__, imp);
     return imp;
 }
 + (IMP)mk_instanceMethodForSelector:(SEL)aSelector {
     IMP imp = [self mk_instanceMethodForSelector:aSelector];
-    NSLog(@"class(%@:%p:%s), value(%p)", self.class, self, __FUNCTION__, imp);
+    OTLog(@"class(%@:%p:%s), value(%p)", self.class, self, __FUNCTION__, imp);
     return imp;
 }
 
 - (void)mk_doesNotRecognizeSelector:(SEL)aSelector {
     [self mk_doesNotRecognizeSelector:aSelector];
-    NSLog(@"class(%@:%p:%s),", self.class, self, __FUNCTION__);
+    OTLog(@"class(%@:%p:%s),", self.class, self, __FUNCTION__);
 }
 
 - (id)mk_forwardingTargetForSelector:(SEL)aSelector {
     id sign = [self mk_forwardingTargetForSelector:aSelector];
-    NSLog(@"class(%@:%p:%s), value(%@)", self.class, self, __FUNCTION__, sign);
+    OTLog(@"class(%@:%p:%s), value(%@)", self.class, self, __FUNCTION__, sign);
     return sign;
 }
 
 - (void)mk_forwardInvocation:(NSInvocation *)anInvocation {
     [self mk_forwardInvocation:anInvocation];
-    NSLog(@"class(%@:%p:%s),", self.class, self, __FUNCTION__);
+    OTLog(@"class(%@:%p:%s),", self.class, self, __FUNCTION__);
 }
 
 - (NSMethodSignature *)mk_methodSignatureForSelector:(SEL)aSelector {
     NSMethodSignature *sign = [self mk_methodSignatureForSelector:aSelector];
-    NSLog(@"class(%@:%p:%s), value(%@)", self.class, self, __FUNCTION__, sign);
+    OTLog(@"class(%@:%p:%s), value(%@)", self.class, self, __FUNCTION__, sign);
     return sign;
 }
 
 + (NSMethodSignature *)mk_instanceMethodSignatureForSelector:(SEL)aSelector {
     NSMethodSignature *sign = [self mk_instanceMethodSignatureForSelector:aSelector];
-    NSLog(@"class(%@:%p:%s), value(%@)", self.class, self, __FUNCTION__, sign);
+    OTLog(@"class(%@:%p:%s), value(%@)", self.class, self, __FUNCTION__, sign);
     return sign;
 }
 
 // cannot swizzle
 //- (BOOL)mk_allowsWeakReference {
 //    BOOL v = [self mk_allowsWeakReference];
-//    NSLog(@"class(%@:%p:%s), value(%d)", self.class, self, __FUNCTION__, v);
+//    OTLog(@"class(%@:%p:%s), value(%d)", self.class, self, __FUNCTION__, v);
 //    return v;
 //}
 //
 //- (BOOL)mk_retainWeakReference {
 //    BOOL v = [self mk_retainWeakReference];
-//    NSLog(@"class(%@:%p:%s), value(%d)", self.class, self, __FUNCTION__, v);
+//    OTLog(@"class(%@:%p:%s), value(%d)", self.class, self, __FUNCTION__, v);
 //    return v;
 //}
 
 
 + (BOOL)mk_resolveClassMethod:(SEL)name {
     BOOL v = [self mk_resolveClassMethod:name];
-    NSLog(@"class(%@:%p:%s), %@, value(%d)", self.class, self, __FUNCTION__, NSStringFromSelector(name), v);
+    OTLog(@"class(%@:%p:%s), %@, value(%d)", self.class, self, __FUNCTION__, NSStringFromSelector(name), v);
     return v;
 }
 
 + (BOOL)mk_resolveInstanceMethod:(SEL)sel {
     BOOL v = [self mk_resolveInstanceMethod:sel];
-    NSLog(@"class(%@:%p:%s), %@, value(%d)", self.class, self, __FUNCTION__, NSStringFromSelector(sel), v);
+    OTLog(@"class(%@:%p:%s), %@, value(%d)", self.class, self, __FUNCTION__, NSStringFromSelector(sel), v);
     return v;
 }
 
 @end
-
-
-
-
-
 
 
 
@@ -121,7 +115,7 @@
 
 @implementation OTObject
 - (void)superMethod:(int)tag {
-    NSLog(@"--super method(%@) imp, tag: (%d)", NSStringFromSelector(_cmd), tag);
+    OTLog(@"--super method(%@) imp, tag: (%d)", NSStringFromSelector(_cmd), tag);
 }
 /****************************** runtime add ***********************************/
 + (BOOL)resolveInstanceMethod:(SEL)name {
@@ -178,12 +172,16 @@
 
 @implementation MsgSend
 
+- (BOOL)ignoreTests {
+    return YES;
+}
+
 - (void)testMessage {
     OTSubObject *obj = [[OTSubObject alloc] init];
     
     
     BOOL v = [obj respondsToSelector:@selector(superVirtualMethod:)];
-    NSLog(@"====%d", v);
+    OTLog(@"====%d", v);
     [obj superVirtualMethod:1];
     
     ((void * (*)(id, SEL, int))objc_msgSend)((id)obj, @selector(superMethod:), 2);

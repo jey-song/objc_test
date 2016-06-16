@@ -6,7 +6,7 @@
 //  Copyright © 2016 jey. All rights reserved.
 //
 
-#import "MaxEarnings.h"
+#import "Headers.h"
 #import <Foundation/Foundation.h>
 
 @interface NSMutableArray (Reverse)
@@ -89,7 +89,7 @@
         }
     }
 
-    NSLog(@"max: %lu, min: %lu", (unsigned long)max, (unsigned long)min);
+    OTLog(@"max: %lu, min: %lu", (unsigned long)max, (unsigned long)min);
     return amount * t;
 }
 

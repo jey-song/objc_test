@@ -6,7 +6,7 @@
 //  Copyright © 2016 jey. All rights reserved.
 //
 
-#import "Test.h"
+#import "Headers.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
 
@@ -22,14 +22,15 @@
 }
 
 - (void)runAllTest {
-    if (_ignoreTests) {
+    if (self.ignoreTests
+        || [self isMemberOfClass:[Test class]]) {
         return;
     }
     
     unsigned int methodCount = 0;
     Method *methods = class_copyMethodList(self.class, &methodCount);
     
-    NSLog(@"Found %d methods on '%s'\n", methodCount, class_getName(self.class));
+    OTLog(@"Found all methods(%d) on '%s'\n", methodCount, class_getName(self.class));
     
     for (unsigned int i = 0; i < methodCount; i++) {
         Method method = methods[i];
@@ -48,7 +49,7 @@
 }
 
 - (void)dealloc {
-    NSLog(@"[dealloc : %p]", self);
+    OTLog(@"[dealloc : %p]", self);
 }
 
 @end
