@@ -21,6 +21,7 @@
 		E9E625991D0D4FB900159320 /* UIView+OT.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E625981D0D4FB900159320 /* UIView+OT.m */; };
 		E9E6259C1D0DAB3800159320 /* MsgSend.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E6259B1D0DAB3800159320 /* MsgSend.m */; };
 		E9E6259F1D0DB0B200159320 /* NSObject+OT.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E6259E1D0DB0B200159320 /* NSObject+OT.m */; };
+		E9F31F071D6D7665004A5CE6 /* UserDefaultTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F31F061D6D7665004A5CE6 /* UserDefaultTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,8 @@
 		E9E6259B1D0DAB3800159320 /* MsgSend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgSend.m; sourceTree = "<group>"; };
 		E9E6259D1D0DB0B200159320 /* NSObject+OT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+OT.h"; sourceTree = "<group>"; };
 		E9E6259E1D0DB0B200159320 /* NSObject+OT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+OT.m"; sourceTree = "<group>"; };
+		E9F31F051D6D7665004A5CE6 /* UserDefaultTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultTest.h; sourceTree = "<group>"; };
+		E9F31F061D6D7665004A5CE6 /* UserDefaultTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,7 @@
 				E9768CBD1D0418D70062700F /* algorithm */,
 				E9768B321CFE87680062700F /* event */,
 				E9768B331CFE87680062700F /* gcd */,
+				E9F31F041D6D764F004A5CE6 /* userdefault */,
 				E9768B341CFE87680062700F /* runloop */,
 			);
 			name = all;
@@ -168,6 +172,15 @@
 				E9E625981D0D4FB900159320 /* UIView+OT.m */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		E9F31F041D6D764F004A5CE6 /* userdefault */ = {
+			isa = PBXGroup;
+			children = (
+				E9F31F051D6D7665004A5CE6 /* UserDefaultTest.h */,
+				E9F31F061D6D7665004A5CE6 /* UserDefaultTest.m */,
+			);
+			path = userdefault;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +278,7 @@
 				E9768B1D1CFE86790062700F /* AppDelegate.m in Sources */,
 				E9768CC61D041E050062700F /* MaxEarnings.m in Sources */,
 				E9768CC31D0419820062700F /* Test.m in Sources */,
+				E9F31F071D6D7665004A5CE6 /* UserDefaultTest.m in Sources */,
 				E9768CC01D0419660062700F /* Binary.m in Sources */,
 				E9E6259F1D0DB0B200159320 /* NSObject+OT.m in Sources */,
 				E9768B1A1CFE86790062700F /* main.m in Sources */,
